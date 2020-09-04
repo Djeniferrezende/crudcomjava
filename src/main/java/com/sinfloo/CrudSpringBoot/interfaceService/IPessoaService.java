@@ -1,6 +1,6 @@
 package com.sinfloo.CrudSpringBoot.interfaceService;
 
-import com.sinfloo.CrudSpringBoot.models.Pessoa;
+import com.sinfloo.CrudSpringBoot.domain.Pessoa;
 
 import java.util.List;
 import java.util.Optional;

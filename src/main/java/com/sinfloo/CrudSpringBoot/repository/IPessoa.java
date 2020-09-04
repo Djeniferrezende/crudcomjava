@@ -1,6 +1,8 @@
-package com.sinfloo.CrudSpringBoot.interfaces;
+package com.sinfloo.CrudSpringBoot.repository;
 
-import com.sinfloo.CrudSpringBoot.models.Pessoa;
+import com.sinfloo.CrudSpringBoot.domain.Pessoa;
+
+
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

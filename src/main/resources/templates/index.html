@@ -9,25 +9,30 @@
 <body>
     <div class="container mt-4">
         <a th:href="@{/new}" class="btn btn-primary">Novo</a>
+
+        <br><br>
         <table class="table">
             <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nome</th>
-                <th>Telefone</th>
-                <th>Ação</th>
-            </tr>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Action</th>
+                </tr>
             </thead>
             <tbody>
             <tr th:each="pessoa:${pessoa}">
-                <td th:text="{pessoa.id}"></td>
-                <td th:text="{pessoa.nome}"></td>
-                <td th:text="{pessoa.telefone}"></td>
-                <a class="btn btn-warning">Editar</a>
-                <a class="btn btn-danger">Excluir</a>
+                <td th:text="${pessoa.id}"></td>
+                <td th:text="${pessoa.nome}"></td>
+                <td th:text="${pessoa.telefone}"></td>
+                <td>
+                    <a th:href="@{/editar/}+${pessoa.id}" class="btn btn-warning">Editar</a>
+                    <a th:href="@{/excluir/}+${pessoa.id}"class="btn btn-danger">Excluir</a>
+                </td>
             </tr>
             </tbody>
         </table>
     </div>
+    
 </body>
 </html>

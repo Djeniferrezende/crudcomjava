@@ -1,6 +1,7 @@
-package com.sinfloo.CrudSpringBoot.models;
+package com.sinfloo.CrudSpringBoot.domain;
 
 import javax.persistence.*;
+//import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "pessoa")
@@ -9,7 +10,7 @@ public class Pessoa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-
+//    @NotBlank
     private String nome;
     private String telefone;
 
@@ -18,7 +19,7 @@ public class Pessoa {
     }
 
 
-    public Pessoa(int id, String nomes, String telefone) {
+    public Pessoa(int id, String nome, String telefone) {
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
@@ -36,7 +37,7 @@ public class Pessoa {
         return nome;
     }
 
-    public void setNome(String nomes) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 

@@ -1,8 +1,8 @@
 package com.sinfloo.CrudSpringBoot.service;
 
 import com.sinfloo.CrudSpringBoot.interfaceService.IPessoaService;
-import com.sinfloo.CrudSpringBoot.interfaces.IPessoa;
-import com.sinfloo.CrudSpringBoot.models.Pessoa;
+import com.sinfloo.CrudSpringBoot.repository.IPessoa;
+import com.sinfloo.CrudSpringBoot.domain.Pessoa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,12 +17,14 @@ public class PessoaService implements IPessoaService {
 
     @Override
     public List<Pessoa> listar() {
+
         return (List<Pessoa>)data.findAll();
     }
 
     @Override
     public Optional<Pessoa> listarId(int id) {
-        return Optional.empty();
+
+        return data.findById(id);
     }
 
     @Override
@@ -37,6 +39,7 @@ public class PessoaService implements IPessoaService {
 
     @Override
     public void delete(int id) {
+        data.deleteById(id);
 
     }
 }
