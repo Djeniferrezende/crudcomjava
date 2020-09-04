@@ -1,4 +1,4 @@
-package com.sinfloo.CrudSpringBoot.interfaceService;
+package com.sinfloo.CrudSpringBoot.service;
 
 import com.sinfloo.CrudSpringBoot.domain.Pessoa;
 

@@ -1,6 +1,6 @@
 package com.sinfloo.CrudSpringBoot.resource;
 
-import com.sinfloo.CrudSpringBoot.interfaceService.IPessoaService;
+import com.sinfloo.CrudSpringBoot.service.IPessoaService;
 
 import com.sinfloo.CrudSpringBoot.domain.Pessoa;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ import javax.validation.Valid;
 
 @Controller
 @RequestMapping
-public class PessoaController {
+public class PessoaResource {
 
     @Autowired
     private IPessoaService service;

@@ -1,7 +1,6 @@
 package com.sinfloo.CrudSpringBoot.service;
 
-import com.sinfloo.CrudSpringBoot.interfaceService.IPessoaService;
-import com.sinfloo.CrudSpringBoot.repository.IPessoa;
+import com.sinfloo.CrudSpringBoot.repository.IPessoaRepository;
 import com.sinfloo.CrudSpringBoot.domain.Pessoa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +12,7 @@ import java.util.Optional;
 public class PessoaService implements IPessoaService {
 
     @Autowired
-    private IPessoa data;
+    private IPessoaRepository data;
 
     @Override
     public List<Pessoa> listar() {
